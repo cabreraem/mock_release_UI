@@ -5,9 +5,16 @@ nav .navbar-brand
     font-size: xx-large;
 }
 
+div .navbar-header
+{
+    padding: 25px;
+}
+
 span
 {
   color: white;
+  font-size: xx-large;
+  padding-left: 20px;
 }
 
 main .form-control
