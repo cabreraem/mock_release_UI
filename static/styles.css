@@ -1,14 +1,13 @@
 nav .navbar-brand
 {
     /* size for brand */
-    padding-left: 10px;
+    padding-left: 50px;
     font-size: xx-large;
-    color: white;
 }
 
-nav .navbar-main
+span
 {
-    color: #3c6a7;
+  color: white;
 }
 
 main .form-control
