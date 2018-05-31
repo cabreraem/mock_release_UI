@@ -7,3 +7,7 @@ def index():
     """Opening page will be dashboard"""
 
     return render_template('index.html')
+
+@app.route('/details')
+def details():
+    return render_template('details.html')
