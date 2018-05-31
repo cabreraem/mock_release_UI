@@ -1,0 +1,36 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    padding-left: 10px;
+    font-size: xx-large;
+    color: white;
+}
+
+nav .navbar-main
+{
+    color: #3c6a7;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
