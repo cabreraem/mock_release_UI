@@ -5,11 +5,6 @@ nav .navbar-brand
     font-size: xx-large;
 }
 
-div .navbar-header
-{
-    padding: 25px;
-}
-
 div #title
 {
     display: inline-block;
