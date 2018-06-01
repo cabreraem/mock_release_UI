@@ -6,25 +6,40 @@
 
 {% block main %}
   <h1 id="detail_release_title"> Some Release {{ release_id }} </h1>
+<div class="row" style="width:50%;">
+  <div class="col-sm-2">
+    <h5>Type:</h5>
+    <h5>Daily {{ release_type }}</h5>
+  </div>
+  <div class="col-sm-5">
+    <h5>Created on:</h5>
+    <h5>mm/dd/yyyy 24:00:00 {{ release_date }}</h5>
+  </div>
+  <div class="col-sm-5">
+    <h5>Last Modified:</h5>
+    <h5>mm/dd/yyyy 24:00:00 {{last_modified}}</h5>
+  </div>
+</div>
+
   <div id="detail-table" style="width:50%;">
-  <table class="table table-bordered">
-    <thead>
-      <th>Status</th>
-      <th>Task</th>
-      <th>Start Time</th>
-      <th>Duration</th>
-      <th>View Logs</th>
-    </thead>
-    <tbody>
-        {% for ___ in ____%}
+    <table class="table table-bordered">
+      <thead>
+        <th>Status</th>
+        <th>Task</th>
+        <th>Start Time</th>
+        <th>Duration</th>
+        <th>View Logs</th>
+      </thead>
+      <tbody>
+          {% for ___ in ____%}
 
-        {% endfor %}
+          {% endfor %}
 
-        <tr>
-        </tr>
-    </tbody>
+          <tr>
+          </tr>
+      </tbody>
 
-  </table>
+    </table>
   </div>
 
 {% endblock %}
