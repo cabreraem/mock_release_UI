@@ -30,12 +30,42 @@
             </th>
         </thead>
         <tbody>
-            {% for ___ in ____%}
-
-            {% endfor %}
-  
+            {% for release in releases%}
             <tr>
+              <td>
+                {% if release["status"] %}
+                <img class="img-responsive" src="/static/images/check.png">
+                {% else %}
+                <img class="img-responsive" src="/static/images/error.png">
+                {% endif %}
+              </td>
+              <td>
+                {{release["version"]}}
+              </td>
+              <td>
+                {{release["creation"]}}
+              </td>
+              <td>
+                {{release["last_mod"]}}
+              </td>
+              <td>
+                {{release["last_active"]}}
+              </td>
+              <td>
+                <button type="button" class="btn btn-secondary btn-sm">
+                  {% if release["tag"] == 1%}
+                    auto
+                  {% elif release["tag"] == 2%}
+                    daily
+                  {% elif release["tag"] == 3%}
+                    weekly
+                  {% elif release["tag"] == 4 %}
+                    monthly
+                  {% endif %}
+                </button>
+              </td>
             </tr>
+            {% endfor %}
         </tbody>
 
     </table>
