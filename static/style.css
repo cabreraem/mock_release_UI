@@ -10,11 +10,38 @@ div .navbar-header
     padding: 25px;
 }
 
+div #title
+{
+    display: inline-block;
+    white-space: nowrap;
+    margin-left: -50px;
+}
+
+div #dates
+{
+  padding-left: 70px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+#detail_release_title
+{
+    font-size: xx-large;
+    white-space: nowrap;
+}
+
+h6
+{
+    color: #858585;
+    float : left;
+    padding: 5px;
+}
+
 span
 {
-  color: white;
-  font-size: xx-large;
-  padding-left: 20px;
+    color: white;
+    font-size: xx-large;
+    padding-left: 20px;
 }
 
 main .form-control
