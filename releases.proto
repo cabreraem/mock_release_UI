@@ -1,7 +1,6 @@
 // releases.proto
 // Definitions for releases and their different components
 
-
 syntax = "proto2";
 option py_api_version = 2;
 

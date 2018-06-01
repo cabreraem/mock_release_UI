@@ -1,4 +1,4 @@
-import releases_pb2
+#import releases_pb2
 from flask import Flask, render_template, request
 
 
