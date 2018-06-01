@@ -25,6 +25,11 @@ div #dates
     white-space: nowrap;
 }
 
+h1
+{
+  padding-left: 10px;
+}
+
 h6
 {
     color: #858585;
