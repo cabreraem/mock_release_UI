@@ -1,3 +1,10 @@
+syntax="proto2"
+
+service GetReleaseDetails {
+    rpc GetRelease (ReleaseName) returns (ReleaseDetails) {}
+}
+
+
 message Modification {
     required string change_url = 1; // link to the modified release code
     required Timestamp timestamp = 2;
@@ -23,4 +30,8 @@ message ReleaseDetails {
     required string build_artifacts = 8; // link to build artifacts location
     required string branch = 9; // link to the Github branch and SHA where release was cut
     repeated ReleaseTask task = 10; // all of the tasks run on this release
+}
+
+message ReleaseName {
+    required string version = 1;
 }
