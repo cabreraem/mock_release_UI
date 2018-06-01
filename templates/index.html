@@ -5,7 +5,9 @@
 {% endblock %}
 
 {% block main %}
-
+    <div class="active-cyan-3 active-cyan-4 mb-4">
+        <input class="form-control" type="text" placeholder="Search to filter" aria-label="Search">
+    </div>
     <table class="table table-striped">
         <thead>
             <th>Status</th>
@@ -13,7 +15,19 @@
             <th>Creation</th>
             <th>Last Modified</th>
             <th>Last Active Task</th>
-            <th>Tags</th>
+            <th>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Tags
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Auto</a>
+                  <a class="dropdown-item" href="#">Daily</a>
+                  <a class="dropdown-item" href="#">Weekly</a>
+                  <a class="dropdown-item" href="#">Monthly</a>
+                </div>
+              </div>
+            </th>
         </thead>
         <tbody>
             {% for ___ in ____%}
