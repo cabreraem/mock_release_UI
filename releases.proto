@@ -1,19 +1,32 @@
-syntax="proto2"
+// releases.proto
+// Definitions for releases and their different components
+
+
+syntax = "proto2";
+option py_api_version = 2;
 
 service GetReleaseDetails {
     rpc GetRelease (ReleaseName) returns (ReleaseDetails) {}
 }
 
+message DateTime {
+    required int32 year = 1;
+    required int32 month = 2;
+    required int32 day = 3;
+    required int32 hour = 4;
+    required int32 minute = 5;
+    required int32 second = 6;
+}
 
 message Modification {
     required string change_url = 1; // link to the modified release code
-    required Timestamp timestamp = 2;
+    required DateTime timestamp = 2;
 }
 
 message ReleaseTask {
     required string task_name = 1;
-    required Timestamp start = 2;
-    required Timestamp end = 3;
+    required DateTime start = 2;
+    required DateTime end = 3;
     required bool status = 4 [default = false];
     optional string error_message = 5;
     optional string log_link = 6;
@@ -21,8 +34,8 @@ message ReleaseTask {
 
 message ReleaseDetails {
     required string version = 1;
-    required Timestamp creation = 2;
-    required Timestamp last_change = 3;
+    required DateTime creation = 2;
+    required DateTime last_change = 3;
     repeated Modification change = 4; // history of modifications
     optional ReleaseTask last_task = 5;
     required bool status = 6 [default = false];
